@@ -17,5 +17,21 @@
     @apply font-semibold;
     @apply font-sans;
     @apply pb-3;
+    @apply uppercase;
   }
+  h3{
+    @apply sm:text-lg;
+    @apply md:text-xl;
+    @apply font-semibold;
+    @apply font-sans;
+    @apply pb-2;
+    @apply uppercase;
+  }
+  h4{
+    @apply font-semibold;
+    @apply font-sans;
+    @apply py-2;
+    @apply uppercase;
+  }
+
 }

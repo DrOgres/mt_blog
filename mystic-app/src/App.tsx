@@ -28,7 +28,7 @@ function App() {
     clearDefaults();
     targetDiv?.classList.remove("w-1", "text-transparent");
     targetDiv?.classList.add("w-full");
-    console.log(postData);
+  
   }, [])
 
   function handleChangeTab(tab: string){
@@ -62,7 +62,7 @@ function App() {
       <section className="container mx-auto">
       <h1 className="">Mystic Thresholds</h1>
       <h2 className="uppercase">A ttrpg from the ground up</h2>
-      <div className="text-lg text-left px-8">
+      <div className="text-lg text-left bg-gradient-to-r from-slate-500 to-neutral-500 p-3 rounded-lg">
         Join me as I develop the latest version of the Mysthic Thresholds RPG.
         Along the way we will explore what works what doesn't, and by the end
         we'll have a full set of rules free for you to download. (And a FoundryVTT system too!)
@@ -116,7 +116,7 @@ function App() {
         >
           <Publish />
         </div>
-        <div className="sidebar bg-slate-300 w-30">And a sidebar here</div>
+        {/* <div className="sidebar bg-slate-300 w-30">And a sidebar here</div> */}
       </div>
     </section>
     <footer className="py-3">

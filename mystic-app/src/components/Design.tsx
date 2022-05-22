@@ -1,4 +1,4 @@
-export default ()=>{
+const Design =  ()=>{
     // TODO Load in the blog posts for the design category
     // TODO display the most recent in the div and return
     return(
@@ -8,3 +8,6 @@ export default ()=>{
     </div>
     );
 }
+
+
+export default Design;

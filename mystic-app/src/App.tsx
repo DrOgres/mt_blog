@@ -3,39 +3,22 @@ import Design from './components/Design';
 import Ramble from './components/Ramble';
 import Publish from './components/Publish';
 import { NavLink } from "react-router-dom";
-import sanityClient from './Client';
 
 function App() {
   const [shownPage, setShownPage] = useState('ramble');
-  const [postData, setPostData] = useState(null);
 
   useEffect(()=>{
-    sanityClient
-			.fetch(
-				`*[_type == "post"]{
-      title,
-      slug,
-      date,
-      section,
-      mainImage,
-      body
-    }`
-			)
-			.then((data) => setPostData(data))
-			.catch(console.error);
-
     const targetDiv = document.getElementById(shownPage);
     clearDefaults();
     targetDiv?.classList.remove("w-1", "text-transparent");
-    targetDiv?.classList.add("w-full");
-  
+    targetDiv?.classList.add("w-full");  
+     // eslint-disable-next-line
   }, [])
 
+
   function handleChangeTab(tab: string){
-  
     setShownPage(tab);
     const targetDiv = document.getElementById(tab);
-
     clearDefaults();
     targetDiv?.classList.remove("w-1", "text-transparent");
     targetDiv?.classList.add("w-full");
